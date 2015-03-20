@@ -1,0 +1,8 @@
+AUTOMAKE_OPTIONS=foreign
+lib_LTLIBRARIES=libTransCode.la
+INCLUDES=-I/cloud/service/java/include -I/cloud/service/java/include/linux
+libTransCode_la_SOURCES=main.cpp  MergeVideoSplitTool.cpp  MergeVideoSplitTool.h  SplitVideoFileTool.cpp  SplitVideoFileTool.h  TransVideoSplitTool.cpp  TransVideoSplitTool.h  UtilTool.cpp  UtilTool.h Allegion_Hadoop_MergeVideoSplitTool.h Allegion_Hadoop_SplitVideoFileTool.h Allegion_Hadoop_TransVideoSplitTool.h
+#libTransCode_la_LDADD=/usr/local/lib/libavcodec.a /usr/local/lib/libavfilter.a /usr/local/lib/libavformat.a  /usr/local/lib/libavutil.a  /usr/local/lib/libpostproc.a   /usr/local/lib/libswresample.a  /usr/local/lib/libswscale.a  /usr/local/lib/libx264.a
+#LIBS=-lavformat -lavcodec -lavutil -lswscale -lpostproc -lswresample -lx264 -lbz2 -lz
+DEFS+=-D_GNU_SOURCE
+ACLOCAL_AMFLAGS=-I m4
